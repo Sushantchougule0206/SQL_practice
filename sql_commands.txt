@@ -1,0 +1,58 @@
+
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+DML Commands:- oprations inside the table
+
+ INSERT: insert into <table_name> (column list) values (column values);
+  
+         insert into Employee(Emp_id, Emp_name) values (001, “ bhanu”);
+   
+ SELECT: select * from <table_name>;
+
+ DELETE: Delete from <table_name>WHERE condition;
+         
+         DELETE from Employee WHERE Emp_id=002;
+
+ UPDATE: UPDATE <table_name> SET column_number =value_number WHERE condition;
+ 
+         UPDATE Employee SET Emp_name= Ram WHERE Emp_id= 001;
+
+
+DDL Commands:- oprations on the table
+
+ CREATE: create table student(stdname varchar(20) , branch varchar(20),college varchar(20),
+         age number, telephone number, address varchar(20));                    
+
+ ALTER:  ALTER TABLE student ADD birthdate DATETIME
+
+ DROP:   DROP TABLE student
+
+ TRUNCATE: TRUNCATE TABLE Tb_name;
+
+
+DCL Commands:-
+
+privilege names are {SELECT,UPDATE,DELETE,INSERT,ALTER,ALL}
+
+objectname is {table name}
+
+user is the name of the {user whose privileges are removing}
+
+
+GRANT: GRANT privilege_name on objectname to user;
+
+       GRANT SELECT, UPDATE ON employees TO Bhanu
+
+REVOKE: REVOKE privilege_name on objectname from user;
+
+        REVOKE SELECT, UPDATE ON employees TO Bhanu
